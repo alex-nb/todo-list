@@ -11,10 +11,8 @@ import './style.css';
 
 const TodoList = ({ getTodoList, deleteTask, updateTask, tasks, loading, add, update, remove }) => {
 
-    let socket;
-
     useEffect(() => {
-        socket = openSocket(process.env.REACT_APP_BASE_URL);
+        const socket = openSocket(process.env.REACT_APP_BASE_URL);
         socket.on('task', data => {
             if (data.action === 'create') {
                 add(data.task);
@@ -36,7 +34,7 @@ const TodoList = ({ getTodoList, deleteTask, updateTask, tasks, loading, add, up
             <Typography component="h1" variant="h2">
                 Todos
             </Typography>
-            <TaskForm socket={socket}/>
+            <TaskForm />
             {tasks.map((task) => (
                 <ListItem key={task._id} dense className="list-item">
                     <Checkbox 

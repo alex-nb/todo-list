@@ -11,7 +11,7 @@ const Task = ({getTask, updateTask, task, match, history}) => {
 
     useEffect(() => {
         getTask(match.params.taskId);
-    }, [getTask]);
+    }, [getTask, match.params.taskId]);
 
     useEffect(() => {
         if (task && title !== task.title) setTitle(task.title);

@@ -69,7 +69,7 @@ export const addTask = formData => async dispatch => {
         }
       };
     try {
-        const res = await axios.post('/todo/task', formData, config);
+        await axios.post('/todo/task', formData, config);
         //dispatch(add(res.data.task));
     } catch (err) {
         console.error(err);
@@ -94,7 +94,7 @@ export const updateTask = (formData, history=null) => async dispatch => {
         }
       };
     try {
-        const res = await axios.put(`/todo/task/${formData.id}`, formData.data, config);
+        await axios.put(`/todo/task/${formData.id}`, formData.data, config);
         //dispatch(update(res.data.task));
         if (history) {
             history.push('/');
