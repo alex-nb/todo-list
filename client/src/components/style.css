@@ -1,0 +1,47 @@
+.close-task {
+    color: black;
+    text-decoration: line-through;
+}
+
+.container {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+.new-task {
+    width: 80%;
+}
+
+.task{
+    color: black;
+    text-decoration: none;
+}
+
+.task:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.edit-task {
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+.buttons {
+    display: inline-block;
+    padding-top: 10%;
+    width: 100%;
+}
+
+.button-left {
+    float: left;
+    left: 30%;
+    width: 10%;
+}
+
+.button-right {
+    float: right;
+    right: 30%;
+    width: 10%;
+}
